@@ -38,12 +38,10 @@ public class BlackListFileService implements FileService {
                 String line;
                 boolean isFirstLine = true;
                 while ((line = reader.readLine()) != null) {
-                    // Skip the first line (header)
                     if (isFirstLine) {
                         isFirstLine = false;
                         continue;
                     }
-                    // Assuming each line in the CSV file represents a phone number
                     blackList.add(line.trim());
                 }
             }
