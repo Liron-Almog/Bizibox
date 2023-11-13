@@ -12,10 +12,4 @@ public class HomeTestApplication {
 		SpringApplication.run(HomeTestApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(String[] args){
-		return runner->{
-			System.out.println("Hello world");
-		};
-	}
 }

@@ -1,4 +1,4 @@
-package com.ex.homeTest.repository;
+package com.ex.homeTest.entity;
 
 
 //POJO class to represent entity PhoneCall
@@ -20,7 +20,7 @@ public class PhoneCall {
     private String callType;
 
     @Column(name = "duration")
-    private String duration;
+    private int duration;
 
     @Column(name = "phone_number")
     private String phoneNumber;
@@ -30,11 +30,11 @@ public class PhoneCall {
 
     public PhoneCall(){}
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

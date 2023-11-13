@@ -1,6 +1,6 @@
-package com.ex.homeTest.model;
+package com.ex.homeTest.dto;
 
-public class PhoneCallPOJO {
+public class PhoneCallPDTO {
 
     private String time;
 
@@ -10,14 +10,14 @@ public class PhoneCallPOJO {
 
     private String phoneNumber;
 
-    public PhoneCallPOJO(String time, String callType, String duration, String phoneNumber) {
+    public PhoneCallPDTO(String time, String callType, String duration, String phoneNumber) {
         this.time = time;
         this.callType = callType;
         this.duration = duration;
         this.phoneNumber = phoneNumber;
     }
 
-    public PhoneCallPOJO() {}
+    public PhoneCallPDTO() {}
 
     public String getTime() {
         return time;
