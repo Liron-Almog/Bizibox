@@ -1,4 +1,5 @@
 #### MySql
+In order to run the program, you need to create the following table
 
 CREATE TABLE phone_calls (
     id INT AUTO_INCREMENT PRIMARY KEY,
