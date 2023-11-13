@@ -1,4 +1,4 @@
-### MySql
+#### MySql
 
 CREATE TABLE phone_calls (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -14,7 +14,7 @@ CREATE USER 'phonecalls'@'%' IDENTIFIED BY 'phonecalls';
 
 GRANT ALL PRIVILEGES ON * . * TO 'phonecalls'@'%';
 
-# endpoinds
+#### endpoinds
 POST - /api/phone-call
 GET - /api/phone-call/xx
 GET - /api/phone-call/duration/xx
