@@ -8,6 +8,6 @@ public interface PhoneCallService {
 
     List<PhoneCall> findByPhoneNumber(String phoneNumber);
     List<PhoneCall> findAll();
-
+    void save(PhoneCall thePhoneCall);
     List<PhoneCall> getPhoneCallsWithDurationGreaterThan(int duration);
 }

@@ -7,11 +7,11 @@ import java.util.HashSet;
 import java.util.Map;
 
 @Service
-public class DataFileService {
+public class ValidationService {
 
     private HashSet<String> blackList;
     private Map<String, String> phoneBook;
-    public DataFileService() {
+    public ValidationService() {
         blackList = new HashSet<>();
         phoneBook = new HashMap<>();
 

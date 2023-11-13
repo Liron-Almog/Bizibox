@@ -26,7 +26,7 @@ public class PhoneCall {
     private String phoneNumber;
 
     @Column(name = "saved_contact")
-    private boolean savedContact;
+    private boolean savedContact =false;
 
     public PhoneCall(){}
 

@@ -28,6 +28,11 @@ public class PhoneCallServiceImpl implements PhoneCallService {
     }
 
     @Override
+    public void save(PhoneCall thePhoneCall) {
+        phoneCallRepository.save(thePhoneCall);
+    }
+
+    @Override
     public List<PhoneCall> getPhoneCallsWithDurationGreaterThan(int duration) {
         return phoneCallRepository.getPhoneCallsWithDurationGreaterThan(duration);
     }
