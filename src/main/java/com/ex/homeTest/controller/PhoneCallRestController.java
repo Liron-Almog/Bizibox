@@ -23,14 +23,16 @@ public class PhoneCallRestController {
     private PhoneCallServiceImpl phoneCallService;
     @Autowired
     private PhoneBookFileService phoneBookFileService;
+    @Autowired
+    private ModelMapper modelMapper; // Inject ModelMapper here
 
-     @PostMapping("/phone-call")
+
+    @PostMapping("/phone-call")
      public void addPhoneCall(@RequestBody PhoneCallPDTO thePhoneCall)
      {
          if(blackListFileService.isExistInFile(thePhoneCall.getPhoneNumber()))
              throw new ThePhoneNumberInTheBlackListException("Phone call is in the blacklist");;
 
-         ModelMapper modelMapper = new ModelMapper();
          PhoneCall TheNewphoneCall = modelMapper.map(thePhoneCall,PhoneCall.class);
 
          if(phoneBookFileService.isExistInFile(TheNewphoneCall.getPhoneNumber()))

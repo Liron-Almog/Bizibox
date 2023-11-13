@@ -1,8 +1,5 @@
 package com.ex.homeTest.entity;
 
-
-//POJO class to represent entity PhoneCall
-
 import javax.persistence.*;
 
 @Entity
