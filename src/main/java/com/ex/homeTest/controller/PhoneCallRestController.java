@@ -22,15 +22,13 @@ public class PhoneCallRestController {
          return;
      }
 
-    @GetMapping("/phone-call/pojo")
-    public List<PhoneCall> getPhoneCallPOGO() {
-
-        List<PhoneCall> temp = phoneCallService.findAll();
-        //PhoneCallPOJO temp = new PhoneCallPOJO("aaa","asdas","asdsa","£");
-        return temp;
+    @GetMapping("/phone-call/{phoneNumber}")
+    public List<PhoneCall> getSpecificPhoneCall(@PathVariable String phoneNumber) {
+         return phoneCallService.findByPhoneNumber(phoneNumber);
     }
-    @GetMapping("/phone-call")
-    public String getPhoneCall() {
-        return "asda";
+
+    @GetMapping("/phone-call/duration/{duration}")
+    public List<PhoneCall> getPhoneCallsWithDurationGreaterThan(@PathVariable int duration) {
+        return phoneCallService.getPhoneCallsWithDurationGreaterThan(duration);
     }
 }

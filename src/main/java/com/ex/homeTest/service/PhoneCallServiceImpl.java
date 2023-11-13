@@ -18,11 +18,19 @@ public class PhoneCallServiceImpl implements PhoneCallService {
     }
 
     @Override
+    public List<PhoneCall> findByPhoneNumber(String phoneNumber) {
+        return phoneCallRepository.findByPhoneNumber(phoneNumber);
+    }
+
+    @Override
     public List<PhoneCall> findAll() {
         return phoneCallRepository.findAll();
     }
-//    @Override
-//    public List<PhoneCall> getAll(){
-//        return this.phoneCallRepository.findAll();
-//    }
+
+    @Override
+    public List<PhoneCall> getPhoneCallsWithDurationGreaterThan(int duration) {
+        return phoneCallRepository.getPhoneCallsWithDurationGreaterThan(duration);
+    }
+
+
 }
