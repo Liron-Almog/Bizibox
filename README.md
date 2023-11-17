@@ -1,4 +1,5 @@
 #### Mysql DB
+CREATE DATABASE your_database_name;
 
 #### endpoinds
 POST - /api/phone-call
